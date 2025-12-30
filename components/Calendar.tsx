@@ -13,6 +13,7 @@ export default function Calendar() {
     // Initialize Cal.com embed using their initialization pattern
     (function (C: any, A: string, L: string) {
       let p = function (a: any, ar: any) {
+        if (!a.q) a.q = [];
         a.q.push(ar);
       };
       let d = C.document;
@@ -28,11 +29,11 @@ export default function Calendar() {
             cal.loaded = true;
           }
           if (ar[0] === L) {
-            const api = function () {
+            const api: any = function () {
               p(api, arguments);
             };
-            const namespace = ar[1];
             api.q = api.q || [];
+            const namespace = ar[1];
             if (typeof namespace === "string") {
               cal.ns[namespace] = cal.ns[namespace] || api;
               p(cal.ns[namespace], ar);
