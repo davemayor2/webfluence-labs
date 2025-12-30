@@ -10,15 +10,16 @@ const plans = [
     price: "299",
     features: [
       "Logo design (4 concepts)",
-      "Brand colors and fonts",
+      "Colors palette and font",
       "Basic brand guidelines",
       "3 rounds revisions",
       "Source files",
-      "Social media brand kit",
+      "Mockups",
+      "Marketing & social assets",
     ],
   },
   {
-    title: "High Converting Landing Pages",
+    title: "High Converting Landing Page",
     description:
       "For businesses running ads or campaigns, launching products that need focused pages designed to turn traffic into leads and booked calls.",
     price: "299",
@@ -26,8 +27,9 @@ const plans = [
       "High conversion copywriting",
       "Custom UI/UX",
       "Mobile responsive layout",
-      "Unlimited revisions",
+      "Basic on page SEO",
       "Analytics & tracking setup",
+      "Unlimited revisions",
       "48 hours response time",
     ],
   },
@@ -37,12 +39,12 @@ const plans = [
       "For businesses that need a professional, conversion-driven website or online store built to sell, and scale revenue.",
     price: "299",
     features: [
-      "Custom web design",
+      "Custom web or store design",
       "Up to 5-10 pages",
       "Speed optimization",
       "High conversion copywriting",
-      "Development (WordPress, Framer, HTML etc)",
-      "Mobile Responsive Layout",
+      "Mobile responsive layout",
+      "Development (Wordpress, Framer, HTML etc)",
       "48 hours response time",
     ],
   },
@@ -58,10 +60,11 @@ export default function Pricing() {
       viewport={{ once: true, amount: 0.25 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Title - Top Left */}
+      <div className="container mx-auto px-8 sm:px-10 lg:px-16 xl:px-24">
+        <div className="max-w-site-container">
+          {/* Section Title - Top Left */}
         <motion.h2
-          className="font-geist text-4xl md:text-5xl font-medium text-white mb-12"
+          className="font-geist text-3xl md:text-4xl font-medium text-white mb-8"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -89,7 +92,7 @@ export default function Pricing() {
               transition={{ duration: 0.45, ease: "easeOut" }}
             >
               {/* Badge Header */}
-              <div className="mb-6">
+              <div className="mb-4">
                 <div className="inline-block bg-[#1A1A1A] rounded-full px-4 py-2">
                   <h3 className="font-geist font-medium text-white text-lg">
                     {plan.title}
@@ -98,12 +101,12 @@ export default function Pricing() {
               </div>
 
               {/* Description */}
-              <p className="font-geist text-gray-400 text-sm mb-6 leading-relaxed">
+              <p className="font-geist text-gray-400 text-sm mb-4 leading-relaxed">
                 {plan.description}
               </p>
 
               {/* Price Section */}
-              <div className="mb-8">
+              <div className="mb-4">
                 <p className="font-geist text-white text-base">
                   Starts at{" "}
                   <span className="text-primary-blue-light font-semibold">
@@ -137,6 +140,7 @@ export default function Pricing() {
             </motion.div>
           ))}
         </motion.div>
+        </div>
       </div>
     </motion.section>
   );

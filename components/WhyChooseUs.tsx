@@ -10,7 +10,7 @@ const AnimatedGrowthIcon = () => (
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="text-white"
+                className="text-primary-blue"
   >
     <motion.path
       d="M3 18L9 12L13 16L21 8"
@@ -52,7 +52,7 @@ const AnimatedRevisionsIcon = () => (
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="text-white"
+                className="text-primary-blue"
     animate={{ rotate: 360 }}
     transition={{
       duration: 3,
@@ -84,7 +84,7 @@ const AnimatedCommunicationIcon = () => (
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="text-white"
+                className="text-primary-blue"
   >
     <motion.rect
       x="3"
@@ -152,7 +152,7 @@ const AnimatedLightningIcon = () => (
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="text-white"
+                className="text-primary-blue"
     animate={{ scale: [1, 1.1, 1] }}
     transition={{
       duration: 1.5,
@@ -185,7 +185,7 @@ const AnimatedPackageIcon = () => (
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="text-white"
+                className="text-primary-blue"
   >
     <motion.rect
       x="3"
@@ -245,7 +245,7 @@ const AnimatedHeadphonesIcon = () => (
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="text-white"
+                className="text-primary-blue"
     animate={{ y: [0, -2, 0] }}
     transition={{
       duration: 2,
@@ -349,10 +349,11 @@ export default function WhyChooseUs() {
       viewport={{ once: true, amount: 0.25 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Title */}
+      <div className="container mx-auto px-8 sm:px-10 lg:px-16 xl:px-24">
+        <div className="max-w-site-container">
+          {/* Section Title */}
         <motion.h2
-          className="font-geist text-4xl md:text-5xl font-medium text-white mb-12"
+          className="font-geist text-3xl md:text-4xl font-medium text-white mb-8"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -363,7 +364,7 @@ export default function WhyChooseUs() {
 
         {/* Grid Layout */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
@@ -375,7 +376,7 @@ export default function WhyChooseUs() {
             return (
               <motion.div
                 key={index}
-                className="bg-[#0B0B0B] border border-white/10 rounded-xl p-8"
+                className="bg-[#0B0B0B] border border-white/10 rounded-xl p-6 text-center max-w-sm mx-auto"
                 variants={{
                   hidden: { opacity: 0, y: 14 },
                   visible: { opacity: 1, y: 0 },
@@ -383,7 +384,7 @@ export default function WhyChooseUs() {
                 transition={{ duration: 0.45, ease: "easeOut" }}
               >
                 {/* Icon Container with Animation */}
-                <div className="w-14 h-14 bg-[#0E1A2B] rounded-lg flex items-center justify-center relative overflow-hidden">
+                <div className="w-12 h-12 bg-[#0E1A2B] rounded-lg flex items-center justify-center relative overflow-hidden mx-auto">
                   {/* Subtle glow effect */}
                   <div className="absolute inset-0 bg-primary-blue/10 rounded-lg blur-sm" />
                   <div className="relative z-10 flex items-center justify-center">
@@ -392,7 +393,7 @@ export default function WhyChooseUs() {
                 </div>
 
                 {/* Title */}
-                <h3 className="font-geist font-semibold text-white mt-6 mb-4 text-lg">
+                <h3 className="font-geist font-semibold text-white mt-3 mb-2 text-lg">
                   {feature.title}
                 </h3>
 
@@ -404,6 +405,7 @@ export default function WhyChooseUs() {
             );
           })}
         </motion.div>
+        </div>
       </div>
     </motion.section>
   );

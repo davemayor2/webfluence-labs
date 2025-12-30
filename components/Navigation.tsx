@@ -10,9 +10,15 @@ export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const magneticProps = useMagneticHover();
 
+  const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div className="container mx-auto px-8 sm:px-10 lg:px-16 xl:px-24 py-4">
         <div
           className="flex items-center justify-between rounded-full px-8 py-5 backdrop-blur-xl"
           style={{
@@ -36,6 +42,7 @@ export default function Navigation() {
           <div className="hidden md:flex items-center justify-center flex-1 space-x-8">
             <Link
               href="/"
+              onClick={scrollToTop}
               className="text-white hover:text-primary-blue transition-colors duration-200 font-medium"
             >
               Home
@@ -129,8 +136,8 @@ export default function Navigation() {
                   {/* Navigation Links */}
                   <Link
                     href="/"
+                    onClick={scrollToTop}
                     className="text-white hover:text-primary-blue transition-colors font-medium text-lg"
-                    onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Home
                   </Link>

@@ -79,10 +79,11 @@ export default function FAQ() {
       viewport={{ once: true, amount: 0.25 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header - Left Aligned */}
+      <div className="container mx-auto px-8 sm:px-10 lg:px-16 xl:px-24">
+        <div className="max-w-site-container">
+          {/* Header - Left Aligned */}
         <motion.h2
-          className="font-satoshi text-4xl md:text-5xl font-bold text-white mb-12"
+          className="font-satoshi text-3xl md:text-4xl font-bold text-white mb-8"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -134,7 +135,7 @@ export default function FAQ() {
                     >
                       {/* Question Text */}
                       <motion.span
-                        className="font-geist text-lg md:text-xl text-white/90 group-hover:text-white flex-1 transition-colors duration-200"
+                        className="font-geist text-base md:text-lg text-white/90 group-hover:text-white flex-1 transition-colors duration-200"
                         whileHover={{ opacity: 1 }}
                       >
                         {faq.question}
@@ -186,7 +187,7 @@ export default function FAQ() {
                           aria-labelledby={`faq-question-${index}`}
                         >
                           <motion.p
-                            className="font-geist text-base md:text-lg text-gray-400 pt-4 pr-8 leading-relaxed"
+                            className="font-geist text-sm md:text-base text-gray-400 pt-4 pr-8 leading-relaxed"
                             initial={{ y: -10 }}
                             animate={{ y: 0 }}
                             transition={{
@@ -204,6 +205,7 @@ export default function FAQ() {
               );
             })}
           </motion.div>
+        </div>
         </div>
       </div>
     </motion.section>

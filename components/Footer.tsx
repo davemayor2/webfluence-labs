@@ -20,14 +20,26 @@ const socialLinks = [
 export default function Footer() {
   return (
     <motion.footer
-      className="bg-black"
+      className="bg-black relative overflow-hidden"
       initial={{ opacity: 0, y: 12 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.25 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        {/* Main Footer Content */}
+      {/* Background Video */}
+      <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
+        <img
+          src="/HeroSectionVid.gif"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        />
+        {/* Dark overlay to ensure text readability */}
+        <div className="absolute inset-0 bg-black/70" />
+      </div>
+      <div className="container mx-auto px-8 sm:px-10 lg:px-16 xl:px-24 py-12 md:py-16 relative z-10">
+        <div className="max-w-site-container">
+          {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 lg:gap-12 items-start">
           {/* Left Column - Menu */}
           <div className="text-center md:text-left">
@@ -52,10 +64,10 @@ export default function Footer() {
           <div className="text-center">
             <Link href="/" className="inline-block mb-6">
               <Image
-                src="/footer big logo.png"
+                src="/footer-big-logo2.png"
                 alt="Webfluence Labs"
-                width={280}
-                height={120}
+                width={1000}
+                height={250}
                 className="h-auto w-auto mx-auto"
                 priority
               />
@@ -93,6 +105,7 @@ export default function Footer() {
               ))}
             </ul>
           </div>
+        </div>
         </div>
       </div>
     </motion.footer>

@@ -37,16 +37,17 @@ export default function Services() {
       viewport={{ once: true, amount: 0.25 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Services Heading */}
+      <div className="container mx-auto px-8 sm:px-10 lg:px-16 xl:px-24">
+        <div className="max-w-site-container">
+          {/* Services Heading */}
         <motion.div
-          className="mb-12"
+          className="mb-6"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          <h2 className="font-geist text-4xl md:text-5xl font-medium text-white mb-4">
+          <h2 className="font-geist text-3xl md:text-4xl font-medium text-white mb-2">
             Services
           </h2>
           {/* Divider Line */}
@@ -64,19 +65,19 @@ export default function Services() {
               transition={{ duration: 0.45, ease: "easeOut", delay: index * 0.1 }}
             >
               {/* Service Item - 2 Column Grid */}
-              <div className="py-12 lg:py-16 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              <div className="py-8 lg:py-10 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
                 {/* Left Column - Text Content (~55% width) */}
                 <div className="flex flex-col justify-center">
-                  {/* Small Uppercase Label */}
-                  <div className="font-geist text-xs md:text-sm font-medium text-white/60 uppercase tracking-wider mb-3">
+                  {/* Main Heading - Service Title */}
+                  <h3 className="font-geist text-2xl md:text-2xl lg:text-2xl font-bold text-white mb-3">
                     {service.title}
-                  </div>
-                  {/* Large Bold Heading */}
-                  <h3 className="font-geist text-2xl md:text-3xl lg:text-4xl font-medium text-white mb-4">
-                    {service.headline}
                   </h3>
-                  {/* Paragraph Text */}
-                  <p className="font-geist text-sm md:text-base text-white/80 leading-relaxed max-w-[480px]">
+                  {/* Subheading */}
+                  <p className="font-geist text-base md:text-lg font-medium text-white/70 mb-4 leading-relaxed max-w-[480px]">
+                    {service.headline}
+                  </p>
+                  {/* Description Text */}
+                  <p className="font-geist text-sm md:text-base text-white/60 leading-relaxed max-w-[480px]">
                     {service.description}
                   </p>
                 </div>
@@ -100,6 +101,7 @@ export default function Services() {
               )}
             </motion.div>
           ))}
+        </div>
         </div>
       </div>
     </motion.section>

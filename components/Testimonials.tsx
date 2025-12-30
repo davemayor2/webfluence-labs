@@ -76,9 +76,10 @@ const row2Items = testimonials.slice(Math.ceil(testimonials.length / 2)).reverse
 export default function Testimonials() {
   return (
     <section className="py-20 bg-black">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Title */}
-        <h2 className="font-geist text-4xl md:text-5xl font-medium text-white mb-12">
+      <div className="container mx-auto px-8 sm:px-10 lg:px-16 xl:px-24">
+        <div className="max-w-site-container">
+          {/* Section Title */}
+        <h2 className="font-geist text-3xl md:text-4xl font-medium text-white mb-8">
           Testimonials
         </h2>
 
@@ -191,6 +192,7 @@ export default function Testimonials() {
               )}
             </div>
           </div>
+        </div>
         </div>
       </div>
     </section>
