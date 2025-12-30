@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "postinstall": "git lfs pull || echo 'Git LFS pull failed, continuing...'"
+    "lint": "next lint"
   },
   "dependencies": {
     "framer-motion": "^12.23.26",
