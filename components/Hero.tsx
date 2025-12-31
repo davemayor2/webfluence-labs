@@ -24,9 +24,12 @@ export default function Hero() {
     >
       {/* Video Background */}
       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
-        <img
-          src="/HeroSectionVid.gif"
-          alt=""
+        <video
+          src="/HeroVid2.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
           className="absolute inset-0 w-full h-full object-cover"
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
