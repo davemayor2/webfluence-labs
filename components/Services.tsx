@@ -41,7 +41,7 @@ export default function Services() {
         <div className="max-w-site-container">
           {/* Services Heading */}
         <motion.div
-          className="mb-6"
+          className="mb-4"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -65,7 +65,7 @@ export default function Services() {
               transition={{ duration: 0.45, ease: "easeOut", delay: index * 0.1 }}
             >
               {/* Service Item - 2 Column Grid */}
-              <div className="py-8 lg:py-10 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
+              <div className="py-6 lg:py-8 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
                 {/* Left Column - Text Content (~55% width) */}
                 <div className="flex flex-col justify-center">
                   {/* Main Heading - Service Title */}
