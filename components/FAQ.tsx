@@ -120,7 +120,7 @@ export default function FAQ() {
                 >
                   {/* FAQ Item */}
                   <div
-                    className={`py-6 ${
+                    className={`py-4 ${
                       index < faqs.length - 1 ? "border-b border-white/10" : ""
                     }`}
                   >
@@ -135,7 +135,7 @@ export default function FAQ() {
                     >
                       {/* Question Text */}
                       <motion.span
-                        className="font-geist text-base md:text-lg text-white/90 group-hover:text-white flex-1 transition-colors duration-200"
+                        className="font-geist text-sm md:text-base text-white/85 group-hover:text-white flex-1 transition-colors duration-200"
                         whileHover={{ opacity: 1 }}
                       >
                         {faq.question}
@@ -187,7 +187,7 @@ export default function FAQ() {
                           aria-labelledby={`faq-question-${index}`}
                         >
                           <motion.p
-                            className="font-geist text-sm md:text-base text-gray-400 pt-4 pr-8 leading-relaxed"
+                            className="font-geist text-xs md:text-sm text-gray-400 pt-3 pr-8 leading-relaxed"
                             initial={{ y: -10 }}
                             animate={{ y: 0 }}
                             transition={{
