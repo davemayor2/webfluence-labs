@@ -61,7 +61,7 @@ export default function PortfolioSlider() {
                     key={`row1-set-${setIndex}-${item.id}`}
                     className="flex-shrink-0 mx-4"
                   >
-                    <div className="relative w-64 h-40 md:w-80 md:h-48 rounded-lg overflow-hidden">
+                    <div className="relative w-72 h-44 md:w-[420px] md:h-56 rounded-lg overflow-hidden">
                       <Image
                         src={item.image}
                         alt={item.title}
@@ -89,7 +89,7 @@ export default function PortfolioSlider() {
                     key={`row2-set-${setIndex}-${item.id}`}
                     className="flex-shrink-0 mx-4"
                   >
-                    <div className="relative w-64 h-40 md:w-80 md:h-48 rounded-lg overflow-hidden">
+                    <div className="relative w-72 h-44 md:w-[420px] md:h-56 rounded-lg overflow-hidden">
                       <Image
                         src={item.image}
                         alt={item.title}
