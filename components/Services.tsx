@@ -69,15 +69,15 @@ export default function Services() {
                 {/* Left Column - Text Content (~55% width) */}
                 <div className="flex flex-col justify-center">
                   {/* Main Heading - Service Title */}
-                  <h3 className="font-geist text-2xl md:text-2xl lg:text-2xl font-bold text-white mb-3">
+                  <h3 className="font-geist text-xl md:text-2xl font-bold text-white mb-2">
                     {service.title}
                   </h3>
                   {/* Subheading */}
-                  <p className="font-geist text-base md:text-lg font-medium text-white/70 mb-4 leading-relaxed max-w-[480px]">
+                  <p className="font-geist text-sm md:text-base font-medium text-white/60 mb-3 leading-relaxed max-w-[520px]">
                     {service.headline}
                   </p>
                   {/* Description Text */}
-                  <p className="font-geist text-sm md:text-base text-white/60 leading-relaxed max-w-[480px]">
+                  <p className="font-geist text-xs md:text-sm text-white/55 leading-relaxed max-w-[520px]">
                     {service.description}
                   </p>
                 </div>
