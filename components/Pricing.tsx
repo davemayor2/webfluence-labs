@@ -64,7 +64,7 @@ export default function Pricing() {
         <div className="max-w-site-container">
           {/* Section Title - Top Left */}
         <motion.h2
-          className="font-geist text-3xl md:text-4xl font-medium text-white mb-8"
+          className="font-geist text-4xl md:text-5xl font-medium text-white mb-8"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

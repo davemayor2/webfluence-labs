@@ -79,7 +79,7 @@ export default function Testimonials() {
       <div className="container mx-auto px-8 sm:px-10 lg:px-16 xl:px-24">
         <div className="max-w-site-container">
           {/* Section Title */}
-        <h2 className="font-geist text-3xl md:text-4xl font-medium text-white mb-8">
+        <h2 className="font-geist text-4xl md:text-5xl font-medium text-white mb-8">
           Testimonials
         </h2>
 

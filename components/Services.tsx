@@ -47,7 +47,7 @@ export default function Services() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          <h2 className="font-geist text-3xl md:text-4xl font-medium text-white mb-2">
+          <h2 className="font-geist text-4xl md:text-5xl font-medium text-white mb-2">
             Services
           </h2>
           {/* Divider Line */}

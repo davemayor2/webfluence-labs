@@ -30,7 +30,7 @@ export default function CTA() {
           {/* Content */}
           <div className="relative z-10 py-8 px-8 md:px-16 lg:px-24 text-center">
             {/* Heading */}
-            <h2 className="font-satoshi text-3xl md:text-4xl font-medium text-white mb-4 leading-tight">
+            <h2 className="font-satoshi text-4xl md:text-5xl font-medium text-white mb-4 leading-tight">
               Your website shouldn't be a missed opportunity
             </h2>
 

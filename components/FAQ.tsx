@@ -83,7 +83,7 @@ export default function FAQ() {
         <div className="max-w-site-container">
           {/* Header - Left Aligned */}
         <motion.h2
-          className="font-satoshi text-3xl md:text-4xl font-bold text-white mb-8"
+          className="font-satoshi text-4xl md:text-5xl font-bold text-white mb-8"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
