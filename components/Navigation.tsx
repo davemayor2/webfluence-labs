@@ -32,9 +32,9 @@ export default function Navigation() {
             <Image
               src="/logo.png"
               alt="Webfluence Labs"
-              width={150}
-              height={50}
-              className="h-10 w-auto"
+              width={320}
+              height={120}
+              className="h-10 md:h-12 lg:h-14 w-auto"
             />
           </Link>
 
@@ -77,7 +77,7 @@ export default function Navigation() {
                   style={{ ...magneticProps.style, color: "#0C2331" }}
                   className="bg-primary-blue hover:bg-primary-blue-light px-8 py-3.5 rounded-full transition-shadow duration-200 hover:shadow-lg hover:shadow-primary-blue/50 font-medium inline-block"
                 >
-                  Connect with Us
+                  Book A Call
                 </Link>
               </div>
 
