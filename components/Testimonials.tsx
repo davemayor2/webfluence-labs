@@ -87,14 +87,17 @@ export default function Testimonials() {
         <div className="space-y-6">
           {/* Row 1 - Scrolls Left */}
           <div className="relative overflow-hidden group w-full">
-            <div className="flex animate-scroll-left">
-              {/* Multiple sets for seamless infinite loop - using 2 sets for 50% translation */}
-              {[...Array(2)].map((_, setIndex) =>
-                row1Items.map((testimonial) => (
-                  <div
-                    key={`row1-${setIndex}-${testimonial.id}`}
-                    className="bg-[#0B0B0B] border border-white/10 rounded-xl p-6 flex-shrink-0 w-80 mx-4"
-                  >
+            <div className="animate-scroll-left">
+              {[0, 1].map((setIndex) => (
+                <div
+                  key={`row1-set-${setIndex}`}
+                  className="flex flex-shrink-0 items-stretch gap-8 pr-8"
+                >
+                  {row1Items.map((testimonial) => (
+                    <div
+                      key={`row1-${setIndex}-${testimonial.id}`}
+                      className="bg-[#0B0B0B] border border-white/10 rounded-xl p-6 flex-shrink-0 w-80"
+                    >
                     {/* Star Ratings */}
                     <div className="flex mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
@@ -134,21 +137,25 @@ export default function Testimonials() {
                       </p>
                     </div>
                   </div>
-                ))
-              )}
+                  ))}
+                </div>
+              ))}
             </div>
           </div>
 
           {/* Row 2 - Scrolls Right */}
           <div className="relative overflow-hidden group w-full">
-            <div className="flex animate-scroll-right">
-              {/* Multiple sets for seamless infinite loop - using 2 sets for 50% translation */}
-              {[...Array(2)].map((_, setIndex) =>
-                row2Items.map((testimonial) => (
-                  <div
-                    key={`row2-${setIndex}-${testimonial.id}`}
-                    className="bg-[#0B0B0B] border border-white/10 rounded-xl p-6 flex-shrink-0 w-80 mx-4"
-                  >
+            <div className="animate-scroll-right">
+              {[0, 1].map((setIndex) => (
+                <div
+                  key={`row2-set-${setIndex}`}
+                  className="flex flex-shrink-0 items-stretch gap-8 pr-8"
+                >
+                  {row2Items.map((testimonial) => (
+                    <div
+                      key={`row2-${setIndex}-${testimonial.id}`}
+                      className="bg-[#0B0B0B] border border-white/10 rounded-xl p-6 flex-shrink-0 w-80"
+                    >
                     {/* Star Ratings */}
                     <div className="flex mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
@@ -188,8 +195,9 @@ export default function Testimonials() {
                       </p>
                     </div>
                   </div>
-                ))
-              )}
+                  ))}
+                </div>
+              ))}
             </div>
           </div>
         </div>

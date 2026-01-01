@@ -108,18 +108,23 @@ export default function Hero() {
                   <div className="absolute right-0 top-0 bottom-0 w-64 bg-gradient-to-l from-black via-black/80 to-transparent z-10 pointer-events-none" />
 
                   {/* Scrolling content */}
-                  <div className="flex animate-scroll-infinite">
-                    {/* Multiple sets for seamless infinite loop - using 2 sets for 50% translation */}
-                    {[...Array(2)].map((_, setIndex) =>
-                      businesses.map((business, index) => (
-                        <div
-                          key={`set-${setIndex}-${index}`}
-                          className="flex-shrink-0 mx-8 text-white text-base md:text-lg font-geist whitespace-nowrap"
-                        >
-                          {business}
-                        </div>
-                      ))
-                    )}
+                  <div className="animate-scroll-infinite">
+                    {/* Two identical sets; parent translates -50% for a seamless loop */}
+                    {[0, 1].map((setIndex) => (
+                      <div
+                        key={`set-${setIndex}`}
+                        className="flex flex-shrink-0 items-center gap-10 pr-10"
+                      >
+                        {businesses.map((business, index) => (
+                          <div
+                            key={`set-${setIndex}-${index}`}
+                            className="flex-shrink-0 text-white text-base md:text-lg font-geist whitespace-nowrap"
+                          >
+                            {business}
+                          </div>
+                        ))}
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>

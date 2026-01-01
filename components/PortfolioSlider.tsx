@@ -53,25 +53,26 @@ export default function PortfolioSlider() {
             <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-black via-black/60 to-transparent z-10 pointer-events-none" />
             {/* Right fade gradient */}
             <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-black via-black/60 to-transparent z-10 pointer-events-none" />
-            <div className="flex animate-scroll-left">
-              {/* Multiple sets for seamless infinite loop - using 2 sets for 50% translation */}
-              {[...Array(2)].map((_, setIndex) =>
-                row1Items.map((item) => (
-                  <div
-                    key={`row1-set-${setIndex}-${item.id}`}
-                    className="flex-shrink-0 mx-4"
-                  >
-                    <div className="relative w-72 h-44 md:w-[420px] md:h-56 rounded-lg overflow-hidden">
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        fill
-                        className="object-cover"
-                      />
+            <div className="animate-scroll-left">
+              {[0, 1].map((setIndex) => (
+                <div
+                  key={`row1-set-${setIndex}`}
+                  className="flex flex-shrink-0 items-center gap-8 pr-8"
+                >
+                  {row1Items.map((item) => (
+                    <div key={`row1-${setIndex}-${item.id}`} className="flex-shrink-0">
+                      <div className="relative w-72 h-44 md:w-[420px] md:h-56 rounded-lg overflow-hidden">
+                        <Image
+                          src={item.image}
+                          alt={item.title}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
                     </div>
-                  </div>
-                ))
-              )}
+                  ))}
+                </div>
+              ))}
             </div>
           </div>
 
@@ -81,25 +82,26 @@ export default function PortfolioSlider() {
             <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-black via-black/60 to-transparent z-10 pointer-events-none" />
             {/* Right fade gradient */}
             <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-black via-black/60 to-transparent z-10 pointer-events-none" />
-            <div className="flex animate-scroll-right">
-              {/* Multiple sets for seamless infinite loop - using 2 sets for 50% translation */}
-              {[...Array(2)].map((_, setIndex) =>
-                row2Items.map((item) => (
-                  <div
-                    key={`row2-set-${setIndex}-${item.id}`}
-                    className="flex-shrink-0 mx-4"
-                  >
-                    <div className="relative w-72 h-44 md:w-[420px] md:h-56 rounded-lg overflow-hidden">
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        fill
-                        className="object-cover"
-                      />
+            <div className="animate-scroll-right">
+              {[0, 1].map((setIndex) => (
+                <div
+                  key={`row2-set-${setIndex}`}
+                  className="flex flex-shrink-0 items-center gap-8 pr-8"
+                >
+                  {row2Items.map((item) => (
+                    <div key={`row2-${setIndex}-${item.id}`} className="flex-shrink-0">
+                      <div className="relative w-72 h-44 md:w-[420px] md:h-56 rounded-lg overflow-hidden">
+                        <Image
+                          src={item.image}
+                          alt={item.title}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
                     </div>
-                  </div>
-                ))
-              )}
+                  ))}
+                </div>
+              ))}
             </div>
           </div>
         </div>

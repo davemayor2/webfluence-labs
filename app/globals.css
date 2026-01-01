@@ -35,6 +35,8 @@ body {
   .animate-scroll-infinite {
     animation: scroll-horizontal 30s linear infinite;
     display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
     will-change: transform;
   }
 
@@ -45,12 +47,16 @@ body {
   .animate-scroll-left {
     animation: scroll-left 40s linear infinite;
     display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
     will-change: transform;
   }
 
   .animate-scroll-right {
     animation: scroll-right 40s linear infinite;
     display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
     will-change: transform;
   }
 
