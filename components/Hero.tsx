@@ -30,16 +30,17 @@ export default function Hero() {
           loop
           muted
           playsInline
+          preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
         {/* Dark overlay to ensure text readability */}
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/35" />
       </div>
       
       {/* Background gradient effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/95 z-0" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,177,213,0.1),transparent_70%)] z-0" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/25 to-black/70 z-[1]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,177,213,0.12),transparent_70%)] z-[1]" />
 
       <div className="container mx-auto px-8 sm:px-10 lg:px-16 xl:px-24 relative z-10">
         <div className="max-w-site-container">

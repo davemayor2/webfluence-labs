@@ -34,11 +34,12 @@ export default function Footer() {
           loop
           muted
           playsInline
+          preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
         {/* Dark overlay to ensure text readability */}
-        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-black/55" />
       </div>
       <div className="container mx-auto px-8 sm:px-10 lg:px-16 xl:px-24 py-12 md:py-16 relative z-10">
         <div className="max-w-site-container">
