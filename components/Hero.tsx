@@ -58,7 +58,7 @@ export default function Hero() {
 
           {/* Subheading */}
           <motion.p
-            className="font-geist text-lg md:text-xl text-white mb-8 max-w-5xl"
+            className="font-geist text-base md:text-lg text-white/80 mb-8 max-w-5xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
@@ -82,7 +82,7 @@ export default function Hero() {
               style={{ ...magneticProps.style, color: "#0C2331" }}
               className="inline-block bg-primary-blue hover:bg-primary-blue-light px-8 py-4 rounded-full font-medium text-lg transition-shadow duration-200 hover:shadow-lg hover:shadow-primary-blue/50"
             >
-              Get a Free Website Strategy Call
+              Get a Free Strategy Call
             </Link>
           </motion.div>
 
