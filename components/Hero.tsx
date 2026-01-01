@@ -25,15 +25,17 @@ export default function Hero() {
       {/* Video Background */}
       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
         <video
-          src="/HeroVid2.mp4"
           autoPlay
           loop
           muted
           playsInline
           preload="auto"
+          disablePictureInPicture
           className="absolute inset-0 w-full h-full object-cover"
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
-        />
+        >
+          <source src="/HeroVid2.mp4" type="video/mp4" />
+        </video>
         {/* Dark overlay to ensure text readability */}
         <div className="absolute inset-0 bg-black/35" />
       </div>

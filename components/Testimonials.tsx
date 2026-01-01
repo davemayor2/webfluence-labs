@@ -87,23 +87,27 @@ export default function Testimonials() {
         <div className="space-y-6">
           {/* Row 1 - Scrolls Left */}
           <div className="relative overflow-hidden group w-full">
+            {/* Left fade gradient */}
+            <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-black via-black/60 to-transparent z-10 pointer-events-none" />
+            {/* Right fade gradient */}
+            <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-black via-black/60 to-transparent z-10 pointer-events-none" />
             <div className="animate-scroll-left">
               {[0, 1].map((setIndex) => (
                 <div
                   key={`row1-set-${setIndex}`}
-                  className="flex flex-shrink-0 items-stretch gap-8 pr-8"
+                  className="flex flex-shrink-0 items-stretch gap-6 pr-6"
                 >
                   {row1Items.map((testimonial) => (
                     <div
                       key={`row1-${setIndex}-${testimonial.id}`}
-                      className="bg-[#0B0B0B] border border-white/10 rounded-xl p-6 flex-shrink-0 w-80"
+                      className="bg-[#0B0B0B] border border-white/10 rounded-xl p-5 flex-shrink-0 w-72"
                     >
                     {/* Star Ratings */}
                     <div className="flex mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <svg
                           key={i}
-                          className="w-5 h-5 text-yellow-400"
+                            className="w-4 h-4 text-yellow-400"
                           fill="currentColor"
                           viewBox="0 0 20 20"
                         >
@@ -113,14 +117,14 @@ export default function Testimonials() {
                     </div>
 
                     {/* Review Text */}
-                    <p className="font-geist text-white mb-6 leading-relaxed">
+                    <p className="font-geist text-sm text-white mb-5 leading-relaxed">
                       {testimonial.content}
                     </p>
 
                     {/* Profile Image, Name, and Role */}
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3">
-                        <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                        <div className="relative w-9 h-9 rounded-full overflow-hidden flex-shrink-0">
                           <Image
                             src={testimonial.avatar}
                             alt={testimonial.name}
@@ -128,11 +132,11 @@ export default function Testimonials() {
                             className="object-cover"
                           />
                         </div>
-                        <p className="font-geist font-semibold text-white">
+                        <p className="font-geist text-sm font-semibold text-white">
                           {testimonial.name}
                         </p>
                       </div>
-                      <p className="font-geist text-gray-400 text-sm">
+                      <p className="font-geist text-gray-400 text-xs">
                         {testimonial.role}
                       </p>
                     </div>
@@ -145,23 +149,27 @@ export default function Testimonials() {
 
           {/* Row 2 - Scrolls Right */}
           <div className="relative overflow-hidden group w-full">
+            {/* Left fade gradient */}
+            <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-black via-black/60 to-transparent z-10 pointer-events-none" />
+            {/* Right fade gradient */}
+            <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-black via-black/60 to-transparent z-10 pointer-events-none" />
             <div className="animate-scroll-right">
               {[0, 1].map((setIndex) => (
                 <div
                   key={`row2-set-${setIndex}`}
-                  className="flex flex-shrink-0 items-stretch gap-8 pr-8"
+                  className="flex flex-shrink-0 items-stretch gap-6 pr-6"
                 >
                   {row2Items.map((testimonial) => (
                     <div
                       key={`row2-${setIndex}-${testimonial.id}`}
-                      className="bg-[#0B0B0B] border border-white/10 rounded-xl p-6 flex-shrink-0 w-80"
+                      className="bg-[#0B0B0B] border border-white/10 rounded-xl p-5 flex-shrink-0 w-72"
                     >
                     {/* Star Ratings */}
                     <div className="flex mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <svg
                           key={i}
-                          className="w-5 h-5 text-yellow-400"
+                            className="w-4 h-4 text-yellow-400"
                           fill="currentColor"
                           viewBox="0 0 20 20"
                         >
@@ -171,14 +179,14 @@ export default function Testimonials() {
                     </div>
 
                     {/* Review Text */}
-                    <p className="font-geist text-white mb-6 leading-relaxed">
+                    <p className="font-geist text-sm text-white mb-5 leading-relaxed">
                       {testimonial.content}
                     </p>
 
                     {/* Profile Image, Name, and Role */}
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3">
-                        <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                        <div className="relative w-9 h-9 rounded-full overflow-hidden flex-shrink-0">
                           <Image
                             src={testimonial.avatar}
                             alt={testimonial.name}
@@ -186,11 +194,11 @@ export default function Testimonials() {
                             className="object-cover"
                           />
                         </div>
-                        <p className="font-geist font-semibold text-white">
+                        <p className="font-geist text-sm font-semibold text-white">
                           {testimonial.name}
                         </p>
                       </div>
-                      <p className="font-geist text-gray-400 text-sm">
+                      <p className="font-geist text-gray-400 text-xs">
                         {testimonial.role}
                       </p>
                     </div>

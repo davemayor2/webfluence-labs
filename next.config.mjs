@@ -4,6 +4,20 @@ const nextConfig = {
     domains: [],
     unoptimized: false,
   },
+  async headers() {
+    return [
+      {
+        // Ensure MP4 backgrounds are served inline (some environments may default to attachment/octet-stream)
+        source: "/HeroVid2.mp4",
+        headers: [
+          { key: "Content-Type", value: "video/mp4" },
+          { key: "Content-Disposition", value: "inline" },
+          { key: "Accept-Ranges", value: "bytes" },
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;
