@@ -65,7 +65,7 @@ export default function Services() {
               transition={{ duration: 0.45, ease: "easeOut", delay: index * 0.1 }}
             >
               {/* Service Item - 2 Column Grid */}
-              <div className="py-2.5 lg:py-3.5 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-center">
+              <div className="py-1.5 lg:py-2.5 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-center">
                 {/* Left Column - Text Content (~55% width) */}
                 <div className="flex flex-col justify-center">
                   {/* Main Heading - Service Title */}
@@ -84,7 +84,7 @@ export default function Services() {
 
                 {/* Right Column - Image Preview (~45% width) */}
                 <div className="flex items-center justify-center lg:justify-end">
-                  <div className="relative w-full max-w-md lg:max-w-lg aspect-video">
+                  <div className="relative w-full max-w-sm lg:max-w-md aspect-video">
                     <Image
                       src={service.image}
                       alt={service.title}
