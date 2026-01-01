@@ -43,7 +43,7 @@ export default function Footer() {
       <div className="container mx-auto px-8 sm:px-10 lg:px-16 xl:px-24 py-12 md:py-16 relative z-10">
         <div className="max-w-site-container">
           {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 lg:gap-12 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_1.6fr_1fr] gap-12 md:gap-8 lg:gap-12 items-start">
           {/* Left Column - Menu */}
           <div className="text-center md:text-left">
             <h3 className="font-geist text-sm text-gray-400 mb-4 uppercase tracking-wide">
@@ -71,7 +71,8 @@ export default function Footer() {
                 alt="Webfluence Labs"
                 width={1000}
                 height={250}
-                className="h-auto w-auto mx-auto"
+                sizes="(max-width: 768px) 320px, (max-width: 1024px) 420px, 560px"
+                className="mx-auto h-auto w-[320px] sm:w-[380px] md:w-[460px] lg:w-[560px] max-w-none"
                 priority
               />
             </Link>
