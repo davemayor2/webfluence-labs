@@ -31,7 +31,7 @@ export default function Services() {
   return (
     <motion.section
       id="services"
-      className="py-20 bg-black"
+      className="py-14 bg-black"
       initial={{ opacity: 0, y: 12 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.25 }}
@@ -65,15 +65,15 @@ export default function Services() {
               transition={{ duration: 0.45, ease: "easeOut", delay: index * 0.1 }}
             >
               {/* Service Item - 2 Column Grid */}
-              <div className="py-4 lg:py-6 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
+              <div className="py-2.5 lg:py-3.5 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-center">
                 {/* Left Column - Text Content (~55% width) */}
                 <div className="flex flex-col justify-center">
                   {/* Main Heading - Service Title */}
-                  <h3 className="font-geist text-xl md:text-2xl font-bold text-white mb-2">
+                  <h3 className="font-geist text-xl md:text-2xl font-bold text-white mb-1.5">
                     {service.title}
                   </h3>
                   {/* Subheading */}
-                  <p className="font-geist text-sm md:text-base font-medium text-white/60 mb-3 leading-relaxed max-w-[520px]">
+                  <p className="font-geist text-sm md:text-base font-medium text-white/60 mb-2 leading-relaxed max-w-[520px]">
                     {service.headline}
                   </p>
                   {/* Description Text */}
