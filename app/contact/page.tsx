@@ -129,7 +129,7 @@ export default function ContactPage() {
                   onMouseMove={magneticProps.onMouseMove}
                   onMouseLeave={magneticProps.onMouseLeave}
                   style={{ ...magneticProps.style, color: "#0C2331" }}
-                  className="w-full bg-primary-blue hover:bg-primary-blue-light px-8 py-4 rounded-full font-semibold text-lg transition-shadow duration-200 hover:shadow-lg hover:shadow-primary-blue/50"
+                  className="w-full bg-primary-blue hover:bg-primary-blue-light px-8 py-3 rounded-full font-semibold text-lg transition-shadow duration-200 hover:shadow-lg hover:shadow-primary-blue/50"
                 >
                   Send Message
                 </button>

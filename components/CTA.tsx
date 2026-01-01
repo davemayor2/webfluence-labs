@@ -47,7 +47,7 @@ export default function CTA() {
               onMouseMove={magneticProps.onMouseMove}
               onMouseLeave={magneticProps.onMouseLeave}
               style={{ ...magneticProps.style, color: "#0C2331" }}
-              className="inline-block bg-primary-blue hover:bg-primary-blue-light px-10 py-4 rounded-full font-semibold text-lg transition-shadow duration-200 hover:shadow-lg hover:shadow-primary-blue/50"
+              className="inline-block bg-primary-blue hover:bg-primary-blue-light px-10 py-3 rounded-full font-semibold text-lg transition-shadow duration-200 hover:shadow-lg hover:shadow-primary-blue/50"
             >
               Book a free strategy call
             </Link>

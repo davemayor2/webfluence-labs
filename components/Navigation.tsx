@@ -75,7 +75,7 @@ export default function Navigation() {
                   onMouseMove={magneticProps.onMouseMove}
                   onMouseLeave={magneticProps.onMouseLeave}
                   style={{ ...magneticProps.style, color: "#0C2331" }}
-                  className="bg-primary-blue hover:bg-primary-blue-light px-8 py-3.5 rounded-full transition-shadow duration-200 hover:shadow-lg hover:shadow-primary-blue/50 font-medium inline-block"
+                  className="bg-primary-blue hover:bg-primary-blue-light px-8 py-3 rounded-full transition-shadow duration-200 hover:shadow-lg hover:shadow-primary-blue/50 font-medium inline-block"
                 >
                   Book A Call
                 </Link>
@@ -171,7 +171,7 @@ export default function Navigation() {
                       onMouseMove={magneticProps.onMouseMove}
                       onMouseLeave={magneticProps.onMouseLeave}
                       style={{ ...magneticProps.style, color: "#0C2331" }}
-                      className="bg-primary-blue hover:bg-primary-blue-light px-8 py-3.5 rounded-full transition-shadow duration-200 text-center font-medium block w-full"
+                      className="bg-primary-blue hover:bg-primary-blue-light px-8 py-3 rounded-full transition-shadow duration-200 text-center font-medium block w-full"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       Connect with Us
