@@ -92,7 +92,7 @@ export default function Pricing() {
               transition={{ duration: 0.45, ease: "easeOut" }}
             >
               {/* Title + Description Box */}
-              <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/10 to-white/0 p-6 shadow-[0_18px_50px_rgba(0,0,0,0.45)] mb-6">
+              <div className="rounded-2xl border border-white/10 bg-[#141414] p-6 shadow-[0_18px_50px_rgba(0,0,0,0.45)] mb-6">
                 <h3 className="font-geist font-semibold text-white text-2xl leading-tight">
                   {plan.title}
                 </h3>
