@@ -59,7 +59,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <nav className="fixed top-4 left-0 right-0 z-50 transition-all duration-300">
       <div className="container mx-auto px-8 sm:px-10 lg:px-16 xl:px-24 py-4">
         <div
           className="flex items-center justify-between rounded-full px-8 py-5 backdrop-blur-xl"
@@ -172,7 +172,7 @@ export default function Navigation() {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 20 }}
                 transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
-                className="md:hidden fixed top-20 left-4 right-4 p-8 rounded-2xl backdrop-blur-xl z-50"
+                className="md:hidden fixed top-24 left-4 right-4 p-8 rounded-2xl backdrop-blur-xl z-50"
                 style={{
                   background:
                     "linear-gradient(180deg, rgba(3, 29, 114, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%)",
