@@ -73,7 +73,7 @@ export default function Services() {
                     {service.title}
                   </h3>
                   {/* Subheading */}
-                  <p className="font-geist text-sm md:text-base font-medium text-white/60 mb-2 leading-relaxed max-w-[520px]">
+                  <p className="font-geist text-sm md:text-base font-bold text-white mb-2 leading-relaxed max-w-[520px]">
                     {service.headline}
                   </p>
                   {/* Description Text */}
