@@ -21,7 +21,7 @@ const plans = [
   {
     title: "High Converting Landing Page",
     description:
-      "For businesses running ads or campaigns, launching products that need focused pages designed to turn traffic into leads and booked calls.",
+      "For businesses running ads or campaigns, launching products that need focused pages designed to turn traffic into leads.",
     price: "299",
     features: [
       "High conversion copywriting",
