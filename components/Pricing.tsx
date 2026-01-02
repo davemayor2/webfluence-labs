@@ -112,12 +112,12 @@ export default function Pricing() {
               </div>
 
               {/* Feature List */}
-              <ul className="space-y-2.5 flex-grow">
+              <ul className="space-y-4 flex-grow">
                 {plan.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start">
                     {/* Check Icon - Teal/Cyan */}
                     <svg
-                      className="w-4.5 h-4.5 text-primary-blue-light mr-2 flex-shrink-0 mt-0.5"
+                      className="w-5 h-5 text-primary-blue-light mr-3 flex-shrink-0 mt-0.5"
                       fill="none"
                       strokeLinecap="round"
                       strokeLinejoin="round"
