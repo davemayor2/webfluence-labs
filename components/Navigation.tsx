@@ -5,15 +5,56 @@ import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useMagneticHover } from "@/hooks/useMagneticHover";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const magneticProps = useMagneticHover();
+  const router = useRouter();
+  const pathname = usePathname();
 
   const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: "smooth" });
     setIsMobileMenuOpen(false);
+  };
+
+  const scrollToSectionCentered = (id: string) => {
+    const el = document.getElementById(id);
+    if (!el) return false;
+
+    const rect = el.getBoundingClientRect();
+    const absoluteTop = rect.top + window.scrollY;
+    const elementCenterOffset = rect.height / 2;
+    const viewportCenterOffset = window.innerHeight / 2;
+    const targetY = Math.max(0, absoluteTop + elementCenterOffset - viewportCenterOffset);
+
+    window.scrollTo({ top: targetY, behavior: "smooth" });
+    return true;
+  };
+
+  const handleSectionNav = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    id: "portfolio" | "services" | "faq"
+  ) => {
+    e.preventDefault();
+    setIsMobileMenuOpen(false);
+
+    const runScroll = (attempt = 0) => {
+      if (scrollToSectionCentered(id)) return;
+      if (attempt >= 25) return;
+      window.setTimeout(() => runScroll(attempt + 1), 80);
+    };
+
+    // If we're not on the home page, navigate there first, then scroll.
+    if (pathname !== "/") {
+      router.push(`/#${id}`);
+      window.setTimeout(() => runScroll(0), 120);
+      return;
+    }
+
+    // Same page: scroll immediately (next frame for layout stability)
+    requestAnimationFrame(() => runScroll(0));
   };
 
   return (
@@ -49,18 +90,21 @@ export default function Navigation() {
             </Link>
             <Link
               href="/#portfolio"
+              onClick={(e) => handleSectionNav(e, "portfolio")}
               className="text-white hover:text-primary-blue transition-colors duration-200 font-medium"
             >
               Portfolio
             </Link>
             <Link
               href="/#services"
+              onClick={(e) => handleSectionNav(e, "services")}
               className="text-white hover:text-primary-blue transition-colors duration-200 font-medium"
             >
               Services
             </Link>
             <Link
               href="/#faq"
+              onClick={(e) => handleSectionNav(e, "faq")}
               className="text-white hover:text-primary-blue transition-colors duration-200 font-medium"
             >
               FAQS
@@ -144,21 +188,21 @@ export default function Navigation() {
                   <Link
                     href="/#portfolio"
                     className="text-white hover:text-primary-blue transition-colors font-medium text-lg"
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={(e) => handleSectionNav(e, "portfolio")}
                   >
                     Portfolio
                   </Link>
                   <Link
                     href="/#services"
                     className="text-white hover:text-primary-blue transition-colors font-medium text-lg"
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={(e) => handleSectionNav(e, "services")}
                   >
                     Services
                   </Link>
                   <Link
                     href="/#faq"
                     className="text-white hover:text-primary-blue transition-colors font-medium text-lg"
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={(e) => handleSectionNav(e, "faq")}
                   >
                     FAQS
                   </Link>
