@@ -6,6 +6,7 @@ import { useMagneticHover } from "@/hooks/useMagneticHover";
 
 export default function CTA() {
   const magneticProps = useMagneticHover();
+  const CAL_LINK = "https://cal.com/heykumarnitish/30min";
 
   return (
     <section className="py-20 bg-black">
@@ -42,7 +43,9 @@ export default function CTA() {
 
             {/* CTA Button */}
             <Link
-              href="/contact"
+              href={CAL_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
               ref={magneticProps.ref as any}
               onMouseMove={magneticProps.onMouseMove}
               onMouseLeave={magneticProps.onMouseLeave}

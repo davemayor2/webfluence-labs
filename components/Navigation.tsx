@@ -12,6 +12,7 @@ export default function Navigation() {
   const magneticProps = useMagneticHover();
   const router = useRouter();
   const pathname = usePathname();
+  const CAL_LINK = "https://cal.com/heykumarnitish/30min";
 
   const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -114,7 +115,9 @@ export default function Navigation() {
               {/* Desktop CTA Button */}
               <div className="hidden md:block flex-shrink-0">
                 <Link
-                  href="/contact"
+                  href={CAL_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   ref={magneticProps.ref as any}
                   onMouseMove={magneticProps.onMouseMove}
                   onMouseLeave={magneticProps.onMouseLeave}
@@ -210,7 +213,9 @@ export default function Navigation() {
                   {/* CTA Button */}
                   <div className="pt-4">
                     <Link
-                      href="/contact"
+                      href={CAL_LINK}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       ref={magneticProps.ref as any}
                       onMouseMove={magneticProps.onMouseMove}
                       onMouseLeave={magneticProps.onMouseLeave}

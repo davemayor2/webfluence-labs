@@ -14,6 +14,7 @@ const businesses = [
 
 export default function Hero() {
   const magneticProps = useMagneticHover();
+  const CAL_LINK = "https://cal.com/heykumarnitish/30min";
 
   return (
     <motion.section
@@ -79,7 +80,9 @@ export default function Hero() {
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
               >
                 <Link
-                  href="/contact"
+                  href={CAL_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   ref={magneticProps.ref as any}
                   onMouseMove={magneticProps.onMouseMove}
                   onMouseLeave={magneticProps.onMouseLeave}
