@@ -87,7 +87,7 @@ export default function Hero() {
                   onMouseMove={magneticProps.onMouseMove}
                   onMouseLeave={magneticProps.onMouseLeave}
                   style={{ ...magneticProps.style, color: "#0C2331" }}
-                  className="inline-block bg-primary-blue hover:bg-primary-blue-light px-8 py-3 rounded-full font-medium text-lg transition-shadow duration-200 hover:shadow-lg hover:shadow-primary-blue/50"
+                  className="inline-block bg-primary-blue hover:bg-primary-blue-light px-7 py-2.5 rounded-full font-medium text-base transition-shadow duration-200 hover:shadow-lg hover:shadow-primary-blue/50"
                 >
                   Get a Free Strategy Call
                 </Link>
