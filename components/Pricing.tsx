@@ -93,7 +93,7 @@ export default function Pricing() {
             >
               {/* Title + Description Box */}
               <div className="rounded-2xl border border-white/10 bg-[#141414] p-6 shadow-[0_18px_50px_rgba(0,0,0,0.45)] mb-6">
-                <h3 className="font-geist font-semibold text-white text-xl leading-tight">
+                <h3 className="font-geist font-semibold text-white text-base md:text-lg leading-tight truncate">
                   {plan.title}
                 </h3>
                 <p className="font-geist text-white/60 text-sm mt-3 leading-relaxed">
@@ -103,7 +103,7 @@ export default function Pricing() {
 
               {/* Price Section */}
               <div className="mb-4">
-                <p className="font-geist text-white text-sm">
+                <p className="font-geist text-white text-base md:text-lg">
                   Starts at{" "}
                   <span className="text-primary-blue-light font-semibold">
                     ${plan.price}
