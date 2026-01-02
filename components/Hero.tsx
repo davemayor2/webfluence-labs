@@ -31,7 +31,7 @@ export default function Hero() {
           playsInline
           preload="auto"
           disablePictureInPicture
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover opacity-60"
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
         >
           <source src="/HeroVid2.mp4" type="video/mp4" />
