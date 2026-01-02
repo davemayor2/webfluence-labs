@@ -91,19 +91,15 @@ export default function Pricing() {
               }}
               transition={{ duration: 0.45, ease: "easeOut" }}
             >
-              {/* Badge Header */}
-              <div className="mb-4">
-                <div className="inline-block bg-[#1A1A1A] rounded-full px-4 py-2">
-                  <h3 className="font-geist font-medium text-white text-lg">
-                    {plan.title}
-                  </h3>
-                </div>
+              {/* Title + Description Box */}
+              <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/10 to-white/0 p-6 shadow-[0_18px_50px_rgba(0,0,0,0.45)] mb-6">
+                <h3 className="font-geist font-semibold text-white text-2xl leading-tight">
+                  {plan.title}
+                </h3>
+                <p className="font-geist text-white/60 text-sm mt-3 leading-relaxed">
+                  {plan.description}
+                </p>
               </div>
-
-              {/* Description */}
-              <p className="font-geist text-gray-400 text-sm mb-4 leading-relaxed">
-                {plan.description}
-              </p>
 
               {/* Price Section */}
               <div className="mb-4">
