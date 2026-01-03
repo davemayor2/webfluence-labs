@@ -73,21 +73,19 @@ export default function Calendar() {
   }, []);
 
   return (
-    <section className="py-20 bg-black">
+    <section className="pt-6 pb-16 bg-black -mt-4">
       <div className="container mx-auto px-8 sm:px-10 lg:px-16 xl:px-24">
         <div className="max-w-site-container">
-          <div className="bg-[#0B0B0B] border border-white/10 rounded-2xl p-8 md:p-12 overflow-hidden">
-            <div
-              id="my-cal-inline-30min"
-              style={{
-                width: "100%",
-                height: "600px",
-                overflow: "auto",
-                minHeight: "600px",
-              }}
-              className="cal-inline-wrapper"
-            />
-          </div>
+          <div
+            id="my-cal-inline-30min"
+            style={{
+              width: "100%",
+              height: "600px",
+              overflow: "auto",
+              minHeight: "600px",
+            }}
+            className="cal-inline-wrapper"
+          />
         </div>
       </div>
     </section>
