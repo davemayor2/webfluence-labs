@@ -5,68 +5,29 @@ import Image from "next/image";
 const testimonials = [
   {
     id: 1,
-    name: "Daniel",
-    role: "Consultant",
-    content: "Our website looks modern, loads fast, and just works. Couldn't be happier.",
+    name: "Ramesh",
+    role: "Founder, XRM ROI",
+    content: "The Webfluence labs team understood our goals quickly and translated them into a website that’s clean, strategic, and conversion-focused. The difference is noticeable.",
     rating: 5,
     avatar: "/testimonials/Ellipse 7.png",
   },
   {
     id: 2,
-    name: "Priya",
-    role: "Consultant",
-    content: "The design is clean, easy to use, and works perfectly on mobile.",
+    name: "Mayuri",
+    role: "Director, Beyond Skin",
+    content: "The logo nailed our brand direction perfectly. It looks professional, stands out in our market, and finally reflects who we are as a business. The process was thoughtful, revisions were handled smoothly, and the final result feels timeless.",
     rating: 5,
     avatar: "/testimonials/Ellipse 7-1.png",
   },
   {
     id: 3,
-    name: "Neha",
-    role: "Marketing Lead",
-    content: "Our website looks modern, loads fast, and just works. Couldn't be happier.",
+    name: "Dontay",
+    role: "Owner, C&D Gourmet",
+    content: "Nitish and his team completely changed how our website performs. Before, we had traffic but very few inquiries. The new site is clear, fast, and more user friendly.",
     rating: 5,
     avatar: "/testimonials/Ellipse 7-2.png",
   },
-  {
-    id: 4,
-    name: "Arjun",
-    role: "Business Owner",
-    content: "The design is clean, easy to use, and works perfectly on mobile.",
-    rating: 5,
-    avatar: "/testimonials/Ellipse 7-3.png",
-  },
-  {
-    id: 5,
-    name: "Sarah",
-    role: "Product Manager",
-    content: "They built us a store that's easy to manage and easy for customers to buy from.",
-    rating: 5,
-    avatar: "/testimonials/Ellipse 7-4.png",
-  },
-  {
-    id: 6,
-    name: "Alex",
-    role: "Founder",
-    content: "Webfluence Labs gave our brand a fresh, professional look. Everything now feels polished and premium.",
-    rating: 5,
-    avatar: "/testimonials/Ellipse 7.png",
-  },
-  {
-    id: 7,
-    name: "Michael",
-    role: "Director",
-    content: "Webfluence Labs is professional and more than capable of delivering quality work.",
-    rating: 5,
-    avatar: "/testimonials/Ellipse 7-1.png",
-  },
-  {
-    id: 8,
-    name: "Emma",
-    role: "CEO",
-    content: "The team delivered exactly what we needed. Highly professional and responsive.",
-    rating: 5,
-    avatar: "/testimonials/Ellipse 7-2.png",
-  },
+
 ];
 
 // Split testimonials into two rows
@@ -99,7 +60,7 @@ export default function Testimonials() {
                   {row1Items.map((testimonial) => (
                     <div
                       key={`row1-${setIndex}-${testimonial.id}`}
-                      className="bg-[#0B0B0B] border border-white/10 rounded-xl p-5 flex-shrink-0 w-72"
+                      className="bg-[#0B0B0B] border border-white/10 rounded-xl p-5 flex-shrink-0 w-[320px] sm:w-[380px] md:w-[440px]"
                     >
                     {/* Star Ratings */}
                     <div className="flex mb-4">
