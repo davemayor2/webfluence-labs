@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import SeamlessLoopVideo from "@/components/SeamlessLoopVideo";
 
 const menuLinks = [
   { name: "Portfolio", href: "/#portfolio" },
@@ -28,18 +29,13 @@ export default function Footer() {
     >
       {/* Background Video */}
       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          disablePictureInPicture
-          className="absolute inset-0 w-full h-full object-cover opacity-60"
+        <SeamlessLoopVideo
+          sources={[{ src: "/HeroVid2.webm", type: "video/webm" }]}
+          crossfadeMs={650}
+          activeOpacity={0.6}
+          className="absolute inset-0 w-full h-full object-cover"
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
-        >
-          <source src="/HeroVid2.webm" type="video/webm" />
-        </video>
+        />
         {/* Dark overlay to ensure text readability */}
         <div className="absolute inset-0 bg-black/55" />
       </div>

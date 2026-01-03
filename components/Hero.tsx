@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useMagneticHover } from "@/hooks/useMagneticHover";
+import SeamlessLoopVideo from "@/components/SeamlessLoopVideo";
 
 const businesses = [
   "Beyond Skin",
@@ -25,18 +26,13 @@ export default function Hero() {
     >
       {/* Video Background */}
       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          disablePictureInPicture
-          className="absolute inset-0 w-full h-full object-cover opacity-60"
+        <SeamlessLoopVideo
+          sources={[{ src: "/HeroVid2.webm", type: "video/webm" }]}
+          crossfadeMs={650}
+          activeOpacity={0.6}
+          className="absolute inset-0 w-full h-full object-cover"
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
-        >
-          <source src="/HeroVid2.webm" type="video/webm" />
-        </video>
+        />
         {/* Dark overlay to ensure text readability */}
         <div className="absolute inset-0 bg-black/35" />
       </div>
