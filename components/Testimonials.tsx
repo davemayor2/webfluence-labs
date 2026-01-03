@@ -77,7 +77,7 @@ export default function Testimonials() {
                     </div>
 
                     {/* Review Text */}
-                    <p className="font-geist text-sm text-white mb-5 leading-relaxed">
+                    <p className="font-geist text-sm text-white/55 mb-5 leading-relaxed">
                       {testimonial.content}
                     </p>
 
@@ -96,7 +96,7 @@ export default function Testimonials() {
                           {testimonial.name}
                         </p>
                       </div>
-                      <p className="font-geist text-gray-400 text-xs">
+                      <p className="font-geist text-white/80 text-xs">
                         {testimonial.role}
                       </p>
                     </div>
