@@ -38,7 +38,7 @@ export default function Footer() {
           className="absolute inset-0 w-full h-full object-cover opacity-60"
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
         >
-          <source src="/HeroVid2.mp4" type="video/mp4" />
+          <source src="/HeroVid2.webm" type="video/webm" />
         </video>
         {/* Dark overlay to ensure text readability */}
         <div className="absolute inset-0 bg-black/55" />
