@@ -12,10 +12,8 @@ const menuLinks = [
 ];
 
 const socialLinks = [
-  { name: "Facebook", icon: "/facebook icon.svg", href: "#" },
-  { name: "Twitter", icon: "/twitter icon.svg", href: "#" },
-  { name: "LinkedIn", icon: "/linkedin icon.svg", href: "#" },
-  { name: "Instagram", icon: "/ig icon.svg", href: "#" },
+  { name: "Instagram", href: "#" },
+  { name: "Linkedin", href: "#" },
 ];
 
 export default function Footer() {
@@ -89,23 +87,16 @@ export default function Footer() {
             <h3 className="font-geist text-sm text-gray-400 mb-4 uppercase tracking-wide">
               Socials
             </h3>
-            <ul className="flex flex-col items-center md:items-end space-y-4">
+            <ul className="flex flex-col items-center md:items-end space-y-3">
               {socialLinks.map((social) => (
                 <li key={social.name}>
                   <a
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 flex items-center justify-center rounded-full border border-white/30 bg-black hover:border-white/60 hover:opacity-90 transition-all duration-200"
-                    aria-label={social.name}
+                    className="font-geist text-white hover:opacity-70 transition-opacity duration-200"
                   >
-                    <Image
-                      src={social.icon}
-                      alt={social.name}
-                      width={20}
-                      height={20}
-                      className="w-5 h-5"
-                    />
+                    {social.name}
                   </a>
                 </li>
               ))}
