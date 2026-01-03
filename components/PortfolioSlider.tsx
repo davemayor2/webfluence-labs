@@ -53,7 +53,7 @@ export default function PortfolioSlider() {
             <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-black via-black/60 to-transparent z-10 pointer-events-none" />
             {/* Right fade gradient */}
             <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-black via-black/60 to-transparent z-10 pointer-events-none" />
-            <div className="animate-scroll-left">
+            <div className="animate-scroll-left-portfolio">
               {[0, 1].map((setIndex) => (
                 <div
                   key={`row1-set-${setIndex}`}
@@ -82,7 +82,7 @@ export default function PortfolioSlider() {
             <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-black via-black/60 to-transparent z-10 pointer-events-none" />
             {/* Right fade gradient */}
             <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-black via-black/60 to-transparent z-10 pointer-events-none" />
-            <div className="animate-scroll-right">
+            <div className="animate-scroll-right-portfolio">
               {[0, 1].map((setIndex) => (
                 <div
                   key={`row2-set-${setIndex}`}

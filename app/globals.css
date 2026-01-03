@@ -60,8 +60,27 @@ body {
     will-change: transform;
   }
 
+  /* Portfolio-only speed (slower / "medium") */
+  .animate-scroll-left-portfolio {
+    animation: scroll-left 55s linear infinite;
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    will-change: transform;
+  }
+
+  .animate-scroll-right-portfolio {
+    animation: scroll-right 55s linear infinite;
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    will-change: transform;
+  }
+
   .group:hover .animate-scroll-left,
-  .group:hover .animate-scroll-right {
+  .group:hover .animate-scroll-right,
+  .group:hover .animate-scroll-left-portfolio,
+  .group:hover .animate-scroll-right-portfolio {
     animation-play-state: paused;
   }
 
