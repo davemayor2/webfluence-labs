@@ -16,6 +16,15 @@ const nextConfig = {
           { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
         ],
       },
+      {
+        source: "/HeroVid2.mp4",
+        headers: [
+          { key: "Content-Type", value: "video/mp4" },
+          { key: "Content-Disposition", value: "inline" },
+          { key: "Accept-Ranges", value: "bytes" },
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+        ],
+      },
     ];
   },
 };

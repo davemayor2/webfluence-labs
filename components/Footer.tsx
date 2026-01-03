@@ -30,7 +30,10 @@ export default function Footer() {
       {/* Background Video */}
       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
         <SeamlessLoopVideo
-          sources={[{ src: "/HeroVid2.webm", type: "video/webm" }]}
+          sources={[
+            { src: "/HeroVid2.webm", type: "video/webm" },
+            { src: "/HeroVid2.mp4", type: "video/mp4" },
+          ]}
           crossfadeMs={650}
           activeOpacity={0.6}
           className="absolute inset-0 w-full h-full object-cover"
