@@ -31,6 +31,9 @@ const geist = Inter({
 export const metadata: Metadata = {
   title: "Webfluence Labs",
   description: "Webfluence Labs - Digital Solutions & Services",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
