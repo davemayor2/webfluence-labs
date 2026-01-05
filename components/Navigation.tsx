@@ -72,7 +72,7 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center flex-shrink-0">
             <Image
-              src="/logo.png"
+              src="/Logo.svg"
               alt="Webfluence Labs"
               width={320}
               height={120}
