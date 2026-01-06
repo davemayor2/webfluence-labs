@@ -9,7 +9,7 @@ const testimonials = [
     role: "Founder, XRM ROI",
     content: "The Webfluence labs team understood our goals quickly and translated them into a website that’s clean, strategic, and conversion-focused. The difference is noticeable.",
     rating: 5,
-    avatar: "/testimonials/Ellipse 7.png",
+    avatar: "/testimonials/Ramesh.jpeg",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const testimonials = [
     role: "Director, Beyond Skin",
     content: "The logo nailed our brand direction perfectly. It looks professional, stands out in our market, and finally reflects who we are as a business. The process was thoughtful, revisions were handled smoothly, and the final result feels timeless.",
     rating: 5,
-    avatar: "/testimonials/Ellipse 7-1.png",
+    avatar: "/testimonials/Mayuri.jpeg",
   },
   {
     id: 3,
