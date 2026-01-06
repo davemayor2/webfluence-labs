@@ -45,7 +45,7 @@ body {
   }
 
   .animate-scroll-left {
-    animation: scroll-left 40s linear infinite;
+    animation: scroll-left 28s linear infinite;
     display: flex;
     flex-wrap: nowrap;
     width: max-content;
@@ -53,7 +53,7 @@ body {
   }
 
   .animate-scroll-right {
-    animation: scroll-right 40s linear infinite;
+    animation: scroll-right 28s linear infinite;
     display: flex;
     flex-wrap: nowrap;
     width: max-content;

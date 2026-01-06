@@ -31,7 +31,7 @@ const testimonials = [
 ];
 
 // Split testimonials into two rows
-const row1Items = testimonials.slice(0, Math.ceil(testimonials.length / 2));
+const row1Items = testimonials;
 
 export default function Testimonials() {
   return (
@@ -60,14 +60,14 @@ export default function Testimonials() {
                   {row1Items.map((testimonial) => (
                     <div
                       key={`row1-${setIndex}-${testimonial.id}`}
-                      className="bg-[#0B0B0B] border border-white/10 rounded-xl p-5 flex-shrink-0 w-[320px] sm:w-[380px] md:w-[440px]"
+                      className="relative bg-[#0B0B0B] border border-white/10 rounded-xl px-6 pt-5 pb-12 flex-shrink-0 w-[320px] sm:w-[380px] md:w-[440px]"
                     >
                     {/* Star Ratings */}
-                    <div className="flex mb-4">
+                    <div className="absolute top-5 right-6 flex gap-1">
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <svg
                           key={i}
-                            className="w-4 h-4 text-yellow-400"
+                            className="w-3.5 h-3.5 text-white/80"
                           fill="currentColor"
                           viewBox="0 0 20 20"
                         >
@@ -76,30 +76,28 @@ export default function Testimonials() {
                       ))}
                     </div>
 
-                    {/* Review Text */}
-                    <p className="font-geist text-sm text-white/55 mb-5 leading-relaxed">
-                      {testimonial.content}
-                    </p>
-
-                    {/* Profile Image, Name, and Role */}
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <div className="relative w-9 h-9 rounded-full overflow-hidden flex-shrink-0">
-                          <Image
-                            src={testimonial.avatar}
-                            alt={testimonial.name}
-                            fill
-                            className="object-cover"
-                          />
-                        </div>
-                        <p className="font-geist text-sm font-semibold text-white">
-                          {testimonial.name}
-                        </p>
+                    {/* Profile Image, Name */}
+                    <div className="order-first flex items-center gap-3 mb-4 pr-16">
+                      <div className="relative w-9 h-9 rounded-full overflow-hidden flex-shrink-0">
+                        <Image
+                          src={testimonial.avatar}
+                          alt={testimonial.name}
+                          fill
+                          className="object-cover"
+                        />
                       </div>
-                      <p className="font-geist text-white/80 text-xs">
+                      <p className="font-geist text-sm font-semibold text-white">
+                        {testimonial.name}
+                      </p>
+                      <p className="font-geist text-xs text-white/50 absolute bottom-5 left-1/2 -translate-x-1/2 whitespace-nowrap">
                         {testimonial.role}
                       </p>
                     </div>
+
+                    {/* Review Text */}
+                    <p className="font-geist text-sm text-white/60 leading-relaxed">
+                      {testimonial.content}
+                    </p>
                   </div>
                   ))}
                 </div>
