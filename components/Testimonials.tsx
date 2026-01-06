@@ -89,8 +89,8 @@ export default function Testimonials() {
                       <p className="font-geist text-sm font-semibold text-white">
                         {testimonial.name}
                       </p>
-                      <p className="font-geist text-xs text-white/50 absolute bottom-5 left-1/2 -translate-x-1/2 whitespace-nowrap">
-                        {testimonial.role}
+                      <p className="font-geist text-xs text-white/50 absolute bottom-5 right-6 whitespace-nowrap text-right">
+                        — {testimonial.role}
                       </p>
                     </div>
 
