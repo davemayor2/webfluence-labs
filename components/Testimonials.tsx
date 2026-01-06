@@ -60,7 +60,7 @@ export default function Testimonials() {
                   {row1Items.map((testimonial) => (
                     <div
                       key={`row1-${setIndex}-${testimonial.id}`}
-                      className="relative bg-[#0B0B0B] border border-white/10 rounded-xl px-6 pt-5 pb-12 flex-shrink-0 w-[320px] sm:w-[380px] md:w-[440px]"
+                      className="relative bg-[#0B0B0B] border border-white/10 rounded-xl px-6 pt-5 pb-12 flex-shrink-0 w-[300px] sm:w-[340px] md:w-[380px]"
                     >
                     {/* Star Ratings */}
                     <div className="absolute top-5 right-6 flex gap-1">
