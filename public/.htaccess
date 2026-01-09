@@ -1,0 +1,12 @@
+<IfModule mod_mime.c>
+  AddType video/webm .webm
+  AddType video/mp4 .mp4
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(webm|mp4|css|js|png|jpg|jpeg|gif|svg|woff|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+
+

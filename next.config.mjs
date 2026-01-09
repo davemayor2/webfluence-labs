@@ -1,8 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
+  trailingSlash: true,
   images: {
     domains: [],
-    unoptimized: false,
+    unoptimized: true,
   },
   async headers() {
     return [
