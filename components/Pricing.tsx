@@ -7,7 +7,7 @@ const plans = [
     title: "Branding",
     description:
       "For businesses that want to look credible, memorable, and positioned as the obvious choice in their market.",
-    price: "299",
+    price: "500",
     features: [
       "Logo design (4 concepts)",
       "Colors palette and font",
@@ -22,7 +22,7 @@ const plans = [
     title: "High Converting Landing Page",
     description:
       "For businesses running ads or campaigns, launching products that need focused pages designed to turn traffic into leads.",
-    price: "299",
+    price: "1,000",
     features: [
       "High conversion copywriting",
       "Custom UI/UX",
@@ -37,7 +37,7 @@ const plans = [
     title: "Websites & E-Commerce",
     description:
       "For businesses that need a professional, conversion-driven website or online store built to sell, and scale revenue.",
-    price: "299",
+    price: "2,000",
     features: [
       "Custom web or store design",
       "Up to 5-10 pages",
