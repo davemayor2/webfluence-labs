@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Allow favicons for search engines
+Allow: /favicon.ico
+Allow: /favicon*.png
+Allow: /android-chrome*.png
+Allow: /apple-touch-icon.png
+
+Sitemap: https://webfluencelabs.com/sitemap.xml

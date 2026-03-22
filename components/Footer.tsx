@@ -12,7 +12,7 @@ const menuLinks = [
 ];
 
 const socialLinks = [
-  { name: "Instagram", href: "#" },
+  { name: "Instagram", href: "https://www.instagram.com/webfluencelabs/" },
   { name: "Linkedin", href: "#" },
 ];
 

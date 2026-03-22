@@ -42,6 +42,8 @@ function Save-Png([int]$size, [string]$outName) {
 Save-Png 16  "favicon-16x16.png"
 Save-Png 32  "favicon-32x32.png"
 Save-Png 48  "favicon-48x48.png"
+Save-Png 96  "favicon-96x96.png"
+Save-Png 144 "favicon-144x144.png"
 Save-Png 180 "apple-touch-icon.png"
 Save-Png 192 "android-chrome-192x192.png"
 Save-Png 512 "android-chrome-512x512.png"
